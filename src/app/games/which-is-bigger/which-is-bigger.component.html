@@ -1,0 +1,14 @@
+@if (state() == 'start') {
+    <div id="start">
+        <div class="btn btn-success" (click)="onPlay()">Play!</div>
+    </div>
+} @else if (state() == 'play') {
+    <div id="play">
+        <div class="sides bg-primary">
+            Nathan
+        </div>
+        <div class="sides bg-info">
+            Cave
+        </div>
+    </div>
+}

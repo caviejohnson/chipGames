@@ -1,0 +1,52 @@
+#banner {
+    background-image: url("assets/chip banner.png");
+    aspect-ratio: 6.03988603988604/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    #title {
+        color: white;
+        font-size: 80px;
+        font-family: 'Josefin Sans';
+        font-weight: bolder;
+    }
+}
+
+#games {
+
+    .game {
+        padding: 15px;
+
+        .game-card {
+            background-color: var(--bs-secondary-bg);
+            border-radius: var(--bs-border-radius-xl);
+
+            .image {
+                padding: 5%;
+
+                div {
+                        border-radius: var(--bs-border-radius-xl);
+                        overflow: hidden;
+
+                    img {
+                        border-radius: var(--bs-border-radius-xl);
+                        width: 100%;
+                        filter: blur(15px);
+                    }
+                }
+
+                span {
+                    display: block;
+                    position: absolute;
+                    padding: 8px;
+                    z-index: 99;
+                    font-weight: bold;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
