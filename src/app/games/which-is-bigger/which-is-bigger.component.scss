@@ -3,7 +3,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    div {
+        font-family: 'Josefin Sans';
+        font-size: 70px;
+        width: 400px;
+        height: 200px;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
+
 
 #play {
     height: 100vh;
@@ -12,9 +24,62 @@
     flex-direction: column;
 }
 
+#right {
+    background-color: #300;
+
+    &:hover {
+        background-color: #100;
+    }
+}
+
+#left {
+    background-color: #003;
+
+    &:hover {
+        background-color: #001;
+    }
+}
+
+#points {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #111;
+    width: 90px;
+    height: 90px;
+    border: 3px solid white;
+    border-radius: 50%;
+    font-family: 'Josefin Sans';
+    font-size: 30px;
+}
+
 .sides {
     height: 50%;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    transition: 0.2s all;
+
+    .image {
+        width: 40%;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .name {
+        font-size: 2rem;
+        font-family: 'Josefin Sans';
+        font-weight: bolder;
+    }
 }
 
 @media (min-width: 768px) {
@@ -24,6 +89,7 @@
         .sides {
             height: 100%;
             width: 50%;
+            flex-direction: column;
         }
     }
 }

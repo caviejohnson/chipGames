@@ -4,11 +4,20 @@
     </div>
 } @else if (state() == 'play') {
     <div id="play">
-        <div class="sides bg-primary">
-            Nathan
+        <div id="points">
+            {{gameData.points}}
         </div>
-        <div class="sides bg-info">
-            Cave
+        <div class="sides" id="left" (click)="sideClicked('left')">
+            <div class="image">
+                <img src="images/earth.png" alt="Earth">
+            </div>
+            <div class="name">{{gameData.current.left}}</div>
+        </div>
+        <div class="sides" id="right" (click)="sideClicked('right')">
+            <div class="image">
+                <img src="images/mars.png" alt="Mars">
+            </div>
+            <div class="name">{{gameData.current.right}}</div>
         </div>
     </div>
 }

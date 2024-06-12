@@ -9,8 +9,17 @@ import { Component, Signal, signal } from '@angular/core';
 })
 export class WhichIsBiggerComponent {
   state = signal('start');
-  
+  gameData = {current: {left: 'Earth', right: 'Mars', correct: 'left'}, points: 0}
+
   onPlay() {
     this.state.set('play');
+  }
+
+  sideClicked(side: string) {
+    if (side == this.gameData.current.correct) {
+      this.gameData.points ++
+    } else {
+      this.gameData.points = 0
+    }
   }
 }
