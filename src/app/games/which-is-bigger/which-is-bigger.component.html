@@ -7,17 +7,25 @@
         <div id="points">
             {{gameData.points}}
         </div>
+        <div id="attr" (click)="attr.showModal();">
+            Attributions
+        </div>
         <div class="sides" id="left" (click)="sideClicked('left')">
             <div class="image">
-                <img src="images/earth.png" alt="Earth">
+                <img [src]="'planetImages/' + gameData.current.left.toLowerCase() + '.png'" [alt]="gameData.current.left">
             </div>
             <div class="name">{{gameData.current.left}}</div>
         </div>
         <div class="sides" id="right" (click)="sideClicked('right')">
             <div class="image">
-                <img src="images/mars.png" alt="Mars">
+                <img [src]="'planetImages/' + gameData.current.right.toLowerCase() + '.png'" [alt]="gameData.current.right">
             </div>
             <div class="name">{{gameData.current.right}}</div>
         </div>
     </div>
 }
+
+<dialog #attr id="attr-dialog">
+    Attributions:
+    The Saturn image: SpiciousS on <a href="https://commons.wikimedia.org/wiki/File:Transparent_Saturn.png">Wikimedia Commons</a>
+</dialog>
